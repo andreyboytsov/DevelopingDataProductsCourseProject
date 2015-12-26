@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+bundleId:
+        https://api.rpubs.com/api/v1/document/137205/447107eb63ba4f95b9593be1d31977f5
+url: http://rpubs.com/andreyboytsov/137205
+when: 1451098468.15306

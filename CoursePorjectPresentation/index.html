@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Human Activity Recognition - Exploring the Dataset</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Human Activity Recognition - Exploring the Dataset">
+  <meta name="author" content="Andrey Boytsov">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Human Activity Recognition - Exploring the Dataset</h1>
+    <h2>Developing Data Projects Course</h2>
+    <p>Andrey Boytsov<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Basic Information</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Purpose
+
+<ul>
+<li>Get ready for Practical Machine Learning course</li>
+<li>Understand the dataset</li>
+<li>Explore it</li>
+<li>Or review the lessons, if you already took that course</li>
+<li>Explore real-life human activity recognition dataset</li>
+<li>Find the sensed features that can distinguish one activity from another</li>
+</ul></li>
+<li>Dataset
+
+<ul>
+<li>Human Activity Recognition Dataset collected by Pontifical Catholic University of Rio de Janeiro
+(Rio de Janeiro, Brazil) - <a href="http://www.puc-rio.br/">http://www.puc-rio.br/</a></li>
+<li>Dataset reference: Velloso, E.; Bulling, A.; Gellersen, H.; Ugulino, W.; Fuks, H. Qualitative Activity Recognition of Weight Lifting Exercises. Proceedings of 4th International Conference in Cooperation with SIGCHI (Augmented Human &#39;13) . Stuttgart, Germany: ACM SIGCHI, 2013.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Dataset Details</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Dataset available under Creative Commons license (CC-BY-SA)</li>
+<li>Contains information about following excercises: Sitting down (class A), Standing up (class B), Standing (class C), Walking (class D), Sitting (class E)</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Dataset and Applicaiton</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Sensor positions: arm, belt, forearm, dumbbelt</li>
+<li>Sensor types: accelerometer, magnetometer, gyroscope</li>
+<li>Dataset contains following potential information sources (sensor readings): Roll - belt, Pitch - belt, Yaw - belt, Absolute acceleration - belt, Gyroscope - belt - X-axis, Gyroscope - belt - Y-axis, Gyroscope - belt - Z-axis, Accelerometer - belt - X-axis, Accelerometer - belt - Y-axis, Accelerometer - belt - Z-axis, etc.
+
+<ul>
+<li>and many more...</li>
+</ul></li>
+<li>Application already performed initial data cleaning
+
+<ul>
+<li>Before any data cleaning: 159 available information sources</li>
+<li>Before analyzing sensor reliability: 152 available information sources</li>
+<li>After full data cleaning: 52 available sensors</li>
+</ul></li>
+<li>Application transformed names to friendly readable format
+
+<ul>
+<li>Both for sensor names and for activity names</li>
+<li>Transformation is automated</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Using The Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Select the activities of interest using the checkboxes
+
+<ul>
+<li>The activities selected on the left will be depicted in red</li>
+<li>The activities selected on the right will be depicted in blue</li>
+</ul></li>
+<li>Select the sensor reading in the drop-down menu
+
+<ul>
+<li>Sensor readings that have too many N/As are already removed from the list</li>
+<li>Unrelated information sources (like number of the sliding window) are also removed from the list</li>
+</ul></li>
+<li>Analyze the histogram
+
+<ul>
+<li>Select at least one activity for histogram to appear</li>
+<li>Turn on mean or median lines if required</li>
+</ul></li>
+<li>Analyze summary statistics at the bottom</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Basic Information'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Dataset Details'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Dataset and Applicaiton'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Using The Application'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
